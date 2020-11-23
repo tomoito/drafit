@@ -5,6 +5,7 @@ import KokoroFilter from './pages/kokoro-filter/KokoroFilter';
 
 const App:React.FC = () => (
   <div className="App">
+
     <Header />
     <KokoroFilter />
   </div>

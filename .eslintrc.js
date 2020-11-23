@@ -41,13 +41,9 @@ module.exports = {
         ],
       },
     ],
-<<<<<<< HEAD
-<<<<<<< HEAD
     'no-use-before-define': 'off',
     '@typescript-eslint/no-use-before-define': ['error'],
     // 'linebreak-style': ['windows'],
-=======
-=======
     'react/jsx-props-no-spreading': [
       'error',
       {
@@ -56,9 +52,6 @@ module.exports = {
         explicitSpread: 'ignore',
       },
     ],
->>>>>>> c1cab2c... setting up eslint
-    'no-use-before-define': ['off'],
->>>>>>> 7336a90... setting up eslint prettier
   },
   settings: {
     'import/resolver': {
