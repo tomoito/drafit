@@ -4,5 +4,5 @@ no-use-before-define
 のエラーが消えた。
 
 （２）
-
+.eslintrc.js にて余計なファイルを追加
 

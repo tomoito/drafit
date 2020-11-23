@@ -1,13 +1,10 @@
 import React from 'react';
 import './App.css';
-import Header from './pages/header/Header';
-import KokoroFilter from './pages/kokoro-filter/KokoroFilter';
+import CombineApp from './pages/combine-app/CombineApp';
 
 const App:React.FC = () => (
   <div className="App">
-
-    <Header />
-    <KokoroFilter />
+    <CombineApp />
   </div>
 );
 
