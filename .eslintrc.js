@@ -41,9 +41,13 @@ module.exports = {
         ],
       },
     ],
+<<<<<<< HEAD
     'no-use-before-define': 'off',
     '@typescript-eslint/no-use-before-define': ['error'],
     // 'linebreak-style': ['windows'],
+=======
+    'no-use-before-define': ['off'],
+>>>>>>> 7336a90... setting up eslint prettier
   },
   settings: {
     'import/resolver': {
