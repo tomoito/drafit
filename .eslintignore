@@ -6,3 +6,4 @@ public/
 *.config.js
 reportWebVitals.ts
 react-app-env.d.ts
+Utils.tsx

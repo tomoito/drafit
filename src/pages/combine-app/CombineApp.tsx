@@ -8,8 +8,10 @@ import ResultStatus from '../result-status/ResultStatus';
 
 const CombineApp:React.FC = () => (
   <div>
-    <Header />
     <Grid container>
+      <Grid item container xs={12}>
+        <Header />
+      </Grid>
       <Grid item xs={3}>
         <KokoroFilter />
       </Grid>
