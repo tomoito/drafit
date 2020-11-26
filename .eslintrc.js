@@ -32,6 +32,7 @@ module.exports = {
         tsx: 'never',
       },
     ],
+    'react/prop-types': 'off',
     'react/jsx-filename-extension': [
       'error',
       {
@@ -41,17 +42,11 @@ module.exports = {
         ],
       },
     ],
+    'react/jsx-props-no-spreading': ['off'],
     'no-use-before-define': 'off',
     '@typescript-eslint/no-use-before-define': ['error'],
     // 'linebreak-style': ['windows'],
-    'react/jsx-props-no-spreading': [
-      'error',
-      {
-        html: 'enforce',
-        custom: 'enforce',
-        explicitSpread: 'ignore',
-      },
-    ],
+
   },
   settings: {
     'import/resolver': {

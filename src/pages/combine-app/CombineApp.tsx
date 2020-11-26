@@ -20,6 +20,7 @@ const CombineApp:React.FC = () => (
         xs={6}
         container
         direction="column"
+        justify="space-between"
       >
         <Grid item>
           <FitKokoro />

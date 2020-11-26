@@ -1,6 +1,6 @@
-import { readFileSync, writeFileSync } from 'fs';
+const fs = require('fs');
 
-const jsonObject = JSON.parse(readFileSync('C:/Users/tomoito/Documents/work/draqwalk/tsconfig.json', 'utf8'));
+const jsonObject = JSON.parse(fs.readFileSync('C:/Users/tomoito/Documents/work/draqwalk/tsconfig.json', 'utf8'));
 jsonObject.compilerOptions.jsx = 'react';
 
-writeFileSync('./tsconfig.json', JSON.stringify(jsonObject));
+fs.writeFileSync('./tsconfig.json', JSON.stringify(jsonObject));
