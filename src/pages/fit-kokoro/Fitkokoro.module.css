@@ -1,0 +1,116 @@
+.btncirclestitch {
+    display: inline-block;
+    text-decoration: none;
+    background: #87befd;
+    color: #FFF;
+    width: 120px;
+    height: 120px;
+    line-height: 120px;
+    border-radius: 50%;
+    text-align: center;
+    overflow: hidden;
+    box-shadow: 0px 0px 0px 5px #87befd;
+    border: dashed 1px #FFF;
+    transition: .4s;
+  }
+
+  .btncirclestitch_rightdown {
+    position: absolute;
+    top: 35%;
+    left: 62%;
+    /* display: inline-block; */
+    text-decoration: none;
+    background: #87befd;
+    color: #FFF;
+    width: 100px;
+    height: 100px;
+    line-height: 40px;
+    border-radius: 50%;
+    text-align: center;
+    overflow: hidden;
+    box-shadow: 0px 0px 0px 5px #87befd;
+    border: dashed 1px #FFF;
+    transition: .4s;
+  }
+
+  .btncirclestitch_leftup {
+    position: absolute;
+    top: 15%;
+    left: 55%;
+    /* display: inline-block; */
+    text-decoration: none;
+    background: #87befd;
+    color: #FFF;
+    width: 100px;
+    height: 100px;
+    line-height: 40px;
+    border-radius: 50%;
+    text-align: center;
+    overflow: hidden;
+    box-shadow: 0px 0px 0px 5px #87befd;
+    border: dashed 1px #FFF;
+    transition: .4s;
+  }
+
+  .btncirclestitch_leftdown {
+    position: absolute;
+    top: 35%;
+    left: 40%;
+    /* display: inline-block; */
+    text-decoration: none;
+    background: #87befd;
+    color: #FFF;
+    width: 100px;
+    height: 100px;
+    line-height: 40px;
+    border-radius: 50%;
+    text-align: center;
+    overflow: hidden;
+    box-shadow: 0px 0px 0px 5px #87befd;
+    border: dashed 1px #FFF;
+    transition: .4s;
+  }
+
+  .btncirclestitch_rightup {
+    position: absolute;
+    top: 15%;
+    left: 40%;
+    /* display: inline-block; */
+    text-decoration: none;
+    background: #87befd;
+    color: #FFF;
+    width: 100px;
+    height: 100px;
+    line-height: 40px;
+    border-radius: 50%;
+    text-align: center;
+    overflow: hidden;
+    box-shadow: 0px 0px 0px 5px #87befd;
+    border: dashed 1px #FFF;
+    transition: .4s;
+  }
+  
+  .btn-circle-stitch:hover {
+    background: #668ad8;
+    box-shadow: 0px 0px 0px 5px #668ad8;
+  }
+
+  .example {
+    position: relative;
+    }
+  
+  .example2 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%,-50%);
+    -webkit-transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%);
+    margin:0;
+    padding:0;
+    /*文字の装飾は省略*/
+    }
+  
+  .exampleimg {
+    /* width: 100%; */
+    }

@@ -1,11 +1,14 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Drawer from '@material-ui/core/Drawer';
 
-import { Button } from '@material-ui/core';
-import clsx from 'clsx';
-
-import CustomButton from '../../components/atom/CustomButton';
+import {
+  Divider, Typography,
+} from '@material-ui/core';
+import ColorSection from '../../components/block/ColorSection';
+import OrderSection from '../../components/block/OrderSection';
+import EffectSection from '../../components/block/EffectSection';
+import ZokuseiSection from '../../components/block/ZokuseiSection';
 
 const drawerWidth = 240;
 
@@ -39,27 +42,26 @@ const useStyles = makeStyles((theme) => ({
     height: 48,
     padding: '0 30px',
     boxShadow: '0 3px 5px 2px rgba(255, 105, 135, .3)',
+    // pointerEvents: 'none',
+    // cursor: 'not-allowed',
+    // hover: 'hidden',
+    // disableTouchRipple: 'true',
   },
   buttonBlue: {
     background: 'linear-gradient(45deg, #2196F3 30%, #21CBF3 90%)',
     boxShadow: '0 3px 5px 2px rgba(33, 203, 243, .3)',
   },
+  colorText: {
+    textAlign: 'left',
+    fontSize: '20px',
+  },
 }));
 
 const KokoroFilter:React.FC = () => {
   const classes = useStyles();
-  const [color, setColor] = useState('default');
-  const handleChange = () => {
-    setColor(color === 'default' ? 'blue' : 'default');
-  };
-
-  const handleChangeBase = (e:any) => {
-    alert(e);
-  };
 
   return (
     <div>
-      <p>aiueo</p>
       <Drawer
         className={classes.drawer}
         variant="permanent"
@@ -68,19 +70,25 @@ const KokoroFilter:React.FC = () => {
         }}
       >
         <div className={classes.drawerContainer}>
-          {/* <Divider /> */}
-          <Button
-            className={clsx(classes.button, {
-              [classes.buttonBlue]: color === 'blue',
-            })}
-            onClick={handleChange}
-          >
-            Class name branch
-          </Button>
-          <CustomButton themeColor="green" handleChangeBase={handleChangeBase}>aiueo</CustomButton>
-          <CustomButton themeColor="red" handleChangeBase={handleChangeBase}>aiueo</CustomButton>
-
+          <Divider />
+          <ColorSection />
+          <br />
+          <Divider variant="middle" />
         </div>
+        <br />
+        <Typography className={classes.colorText}>Order</Typography>
+        <OrderSection />
+        <Divider variant="middle" />
+        <br />
+
+        <EffectSection />
+
+        <br />
+        <Divider variant="middle" />
+        <ZokuseiSection />
+        <Divider variant="middle" />
+        <br />
+
       </Drawer>
     </div>
   );
