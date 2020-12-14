@@ -23,6 +23,7 @@ module.exports = {
     '@typescript-eslint',
   ],
   rules: {
+    'no-param-reassign': ['off'],
     'import/extensions': [
       'error',
       {
@@ -33,6 +34,7 @@ module.exports = {
       },
     ],
     'react/prop-types': 'off',
+    'max-len': ['off'],
     'react/jsx-filename-extension': [
       'error',
       {

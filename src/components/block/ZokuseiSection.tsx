@@ -1,6 +1,9 @@
 import React from 'react';
 import { Grid, Typography } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
+import { AppDispatch } from 'app/store';
+import { useDispatch } from 'react-redux';
+import { addFilter, FlterResult } from 'feature/DraqWalkSlice';
 import CustomButtonEffect from '../atom/CustomButtonEffect';
 
 const useStyles = makeStyles(() => ({
@@ -14,40 +17,43 @@ const useStyles = makeStyles(() => ({
 }));
 
 const ZokuseiSection:React.FC = () => {
+  const dispatch: AppDispatch = useDispatch();
   const classes = useStyles();
-    const handleChangeBase = (e:any) => {// eslint-disable-line
-    // alert(e);
+
+  const handleChangeBase = async (e:any) => {
+    await dispatch(addFilter(e));
+    await dispatch(FlterResult());
   };
   return (
     <div>
-      <Typography className={classes.colorText}>属性</Typography>
-      <Grid container spacing={3}>
+      <Typography className={classes.colorText}>耐性</Typography>
+      <Grid container spacing={1}>
         <Grid item xs={4}>
-          <CustomButtonEffect themeColor="linear-gradient(45deg, #FFF176 30%, #FFEB3B 90%)" handleChangeBase={handleChangeBase} dispShow="全属性">aiueo</CustomButtonEffect>
+          <CustomButtonEffect themeColor="linear-gradient(45deg, #FE6B8B 30%, #FF8E53 90%)" handleChangeBase={() => handleChangeBase('全属性')} dispShow="全属性">aiueo</CustomButtonEffect>
         </Grid>
         <Grid item xs={4}>
-          <CustomButtonEffect themeColor="linear-gradient(45deg, #FFF176 30%, #FFEB3B 90%)" handleChangeBase={handleChangeBase} dispShow="属性">メラ</CustomButtonEffect>
+          <CustomButtonEffect themeColor="linear-gradient(45deg, #FE6B8B 30%, #FF8E53 90%)" handleChangeBase={() => handleChangeBase('メラ耐性')} dispShow="メラ">メラ</CustomButtonEffect>
         </Grid>
         <Grid item xs={4}>
-          <CustomButtonEffect themeColor="linear-gradient(45deg, #FFF176 30%, #FFEB3B 90%)" handleChangeBase={handleChangeBase} dispShow="HP回復">ギラ</CustomButtonEffect>
+          <CustomButtonEffect themeColor="linear-gradient(45deg, #FE6B8B 30%, #FF8E53 90%)" handleChangeBase={() => handleChangeBase('ヒャド耐性')} dispShow="ヒャド">ヒャド</CustomButtonEffect>
         </Grid>
         <Grid item xs={4}>
-          <CustomButtonEffect themeColor="linear-gradient(45deg, #FFF176 30%, #FFEB3B 90%)" handleChangeBase={handleChangeBase} dispShow="MP回復">ヒャド</CustomButtonEffect>
+          <CustomButtonEffect themeColor="linear-gradient(45deg, #FE6B8B 30%, #FF8E53 90%)" handleChangeBase={() => handleChangeBase('ディン耐性')} dispShow="ディン">ディン</CustomButtonEffect>
         </Grid>
         <Grid item xs={4}>
-          <CustomButtonEffect themeColor="linear-gradient(45deg, #FFF176 30%, #FFEB3B 90%)" handleChangeBase={handleChangeBase} dispShow="MP回復">バギ</CustomButtonEffect>
+          <CustomButtonEffect themeColor="linear-gradient(45deg, #FE6B8B 30%, #FF8E53 90%)" handleChangeBase={() => handleChangeBase('ドルマ耐性')} dispShow="ドルマ">ドルマ</CustomButtonEffect>
         </Grid>
         <Grid item xs={4}>
-          <CustomButtonEffect themeColor="linear-gradient(45deg, #FFF176 30%, #FFEB3B 90%)" handleChangeBase={handleChangeBase} dispShow="MP回復">ディン</CustomButtonEffect>
+          <CustomButtonEffect themeColor="linear-gradient(45deg, #FE6B8B 30%, #FF8E53 90%)" handleChangeBase={() => handleChangeBase('バギ耐性')} dispShow="バギ">バギ</CustomButtonEffect>
         </Grid>
         <Grid item xs={4}>
-          <CustomButtonEffect themeColor="linear-gradient(45deg, #FFF176 30%, #FFEB3B 90%)" handleChangeBase={handleChangeBase} dispShow="MP回復">ジバリア</CustomButtonEffect>
+          <CustomButtonEffect themeColor="linear-gradient(45deg, #FE6B8B 30%, #FF8E53 90%)" handleChangeBase={() => handleChangeBase('ジバリア耐性')} dispShow="ジバリア" />
         </Grid>
         <Grid item xs={4}>
-          <CustomButtonEffect themeColor="linear-gradient(45deg, #FFF176 30%, #FFEB3B 90%)" handleChangeBase={handleChangeBase} dispShow="MP回復">イオ</CustomButtonEffect>
+          <CustomButtonEffect themeColor="linear-gradient(45deg, #FE6B8B 30%, #FF8E53 90%)" handleChangeBase={() => handleChangeBase('ギラ耐性')} dispShow="ギラ" />
         </Grid>
-        <Grid item xs={6}>
-          <CustomButtonEffect themeColor="linear-gradient(45deg, #FFF176 30%, #FFEB3B 90%)" handleChangeBase={handleChangeBase} dispShow="MP回復">ドルマ</CustomButtonEffect>
+        <Grid item xs={4}>
+          <CustomButtonEffect themeColor="linear-gradient(45deg, #FE6B8B 30%, #FF8E53 90%)" handleChangeBase={() => handleChangeBase('イオ耐性')} dispShow="イオ">バギ</CustomButtonEffect>
         </Grid>
       </Grid>
       {' '}

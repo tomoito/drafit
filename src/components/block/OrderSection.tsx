@@ -30,7 +30,7 @@ const OrderSection:React.FC = () => {
         }}
         id="controllable-states-demo"
         options={options}
-        style={{ width: 300 }}
+        style={{ width: 250 }}
         renderInput={(params) => <TextField {...params} variant="outlined" />}
       />
     </div>
