@@ -21,8 +21,8 @@ const useStyles = makeStyles({
     border: 0,
     height: 48,
     minWidth: 80,
-    padding: '0 10px',
-    fontSize: 10,
+    padding: '0 5px',
+    fontSize: 16,
     fontColor: 'black',
     boxShadow: '0 3px 5px 2px rgba(255, 105, 135, .3)',
     // background: (props:PROPS_BUTTON_COLOR) => props.color,
@@ -32,9 +32,12 @@ const useStyles = makeStyles({
 const CustomButtonEffect: React.FC<PROPS_CUSTOMBUTTON> = (
   { themeColor, handleChangeBase, dispShow },
 ) => {
-  const [color, setColor] = useState(themeColor);
+  const [color, setColor] = useState('silver');
+  const [colorSilver, setColorSilver] = useState(themeColor);
+
   const handleChange = () => {
-    setColor(color === themeColor ? 'silver' : themeColor);
+    // setColor(color === themeColor ? 'silver' : themeColor);
+    setColor(color !== themeColor ? colorSilver : 'silver');
     handleChangeBase(themeColor);
   };
 

@@ -1,0 +1,46 @@
+[
+    {
+      "id": 1,      
+      "name": "すごい盾",
+      "hp":11,
+      "mp":11,
+      "攻撃力":11,
+      "img":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTgiONT62_pmjj9iXHdD3klIE94IBybEc8jRw&usqp=CAU",
+      "メラ斬撃":10,
+      "メラ耐性":10,
+      "フィルター":["スキル斬撃"]
+    },
+    {
+      "id": 2,
+      "name": "まぁまぁの防具",
+      "hp":20,
+      "mp":20,
+      "攻撃力":20,
+      "img":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTgiONT62_pmjj9iXHdD3klIE94IBybEc8jRw&usqp=CAU",
+      "メラ斬撃":20,
+      "メラ耐性":20,
+      "フィルター":["スキル斬撃","メラ耐性","イオ属性","イオ耐性","ヒャド属性","ヒャド耐性"]
+    },
+    {
+      "id": 3,      
+      "name": "盾が欲しい",
+      "hp":30,
+      "mp":30,
+      "攻撃力":30,
+      "img":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTmGBsT6Hd0xtZZaOwh-1zF0TYcvOA8tcfAUA&usqp=CAU",
+      "メラ斬撃":30,
+      "メラ耐性":30,
+      "フィルター":["スキル斬撃","メラ耐性","イオ属性","イオ耐性","ヒャド属性","ヒャド耐性"]
+    },
+    {
+      "id": 4,
+      "name": "盾魔人",
+      "hp":40,
+      "mp":135,
+      "攻撃力":100,
+      "img":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQhPQPPJ_11KbBPUgju1YHlmSDvh8aeNVWQ7w&usqp=CAU",
+      "メラ斬撃":0,
+      "メラ耐性":15,
+      "フィルター":["ディン属性","バギ耐性","メラ斬撃"]
+    }
+]

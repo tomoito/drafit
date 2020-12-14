@@ -10,7 +10,7 @@ import OrderSection from '../../components/block/OrderSection';
 import EffectSection from '../../components/block/EffectSection';
 import ZokuseiSection from '../../components/block/ZokuseiSection';
 
-const drawerWidth = 240;
+const drawerWidth = 280;
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -27,12 +27,19 @@ const useStyles = makeStyles((theme) => ({
   drawerPaper: {
     width: drawerWidth,
   },
-  drawerContainer: {
-    overflow: 'hidden',
-  },
+  toolbar: theme.mixins.toolbar,
   content: {
     flexGrow: 1,
+    backgroundColor: theme.palette.background.default,
     padding: theme.spacing(3),
+  },
+  paper: {
+    height: 200,
+    width: 200,
+    backgroundColor: 'pink',
+  },
+  drawerContainer: {
+    overflow: 'hidden',
   },
   button: {
     background: 'linear-gradient(45deg, #FE6B8B 30%, #FF8E53 90%)',
@@ -62,34 +69,31 @@ const KokoroFilter:React.FC = () => {
 
   return (
     <div>
+
       <Drawer
         className={classes.drawer}
         variant="permanent"
         classes={{
           paper: classes.drawerPaper,
         }}
+        anchor="left"
       >
-        <div className={classes.drawerContainer}>
-          <Divider />
-          <ColorSection />
-          <br />
-          <Divider variant="middle" />
-        </div>
+        <div className={classes.toolbar} />
+        <Divider />
+        <ColorSection />
         <br />
         <Typography className={classes.colorText}>Order</Typography>
         <OrderSection />
-        <Divider variant="middle" />
         <br />
-
         <EffectSection />
+        <br />
+        <Divider variant="middle" />
+        <br />
 
-        <br />
-        <Divider variant="middle" />
         <ZokuseiSection />
-        <Divider variant="middle" />
-        <br />
 
       </Drawer>
+
     </div>
   );
 };
